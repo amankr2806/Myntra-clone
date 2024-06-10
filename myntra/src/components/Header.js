@@ -9,7 +9,7 @@ const Header = () => {
     <>
       <header>
         <div className="logo_container">
-          <a href="#">
+          <a href="/">
             <img
               className="myntra_home"
               src="images/myntra_logo.webp"
@@ -45,7 +45,7 @@ const Header = () => {
             <span className="action_name">Wishlist</span>
           </div>
 
-          <a className="action_container" href="">
+          <a className="action_container" href="\Bag">
             <BsBagCheckFill />
             <span className="action_name">Bag</span>
             <span className="bag-item-count">0</span>

@@ -1,19 +1,21 @@
-import Footer from "./Footer";
-import Header from "./Header";
+'use client'
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
-const Bag = () => {
+
+export default function Bag() {
   return (
     <>
-      <Header></Header>
+      <Header />
       <main>
         <div className="bag-page">
           <div className="bag-items-container"></div>
           <div className="bag-summary"></div>
         </div>
       </main>
-      <Footer></Footer>
+      <Footer />
     </>
   );
 };
 
-export default Bag;
+

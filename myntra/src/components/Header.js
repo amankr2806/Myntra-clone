@@ -2,6 +2,7 @@ import {
   BsFillPersonFill,
   BsFillHeartFill,
   BsBagCheckFill,
+  BsSearch,
 } from "react-icons/bs";
 
 const Header = () => {
@@ -28,9 +29,12 @@ const Header = () => {
           </a>
         </nav>
         <div className="search_bar">
-          <span className="material-symbols-outlined search_icon">search</span>
+          <span className="material-symbols-outlined search_icon">
+            <BsSearch />
+          </span>
           <input
             className="search_input"
+            type="text"
             placeholder="Search for products, brands and more"
           />
         </div>

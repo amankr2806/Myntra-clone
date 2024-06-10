@@ -1,4 +1,5 @@
 const HomeItem = ({ item }) => {
+  
   return (
     <div className="item-container">
       <img className="item-image" src={item.image} alt="item image" />

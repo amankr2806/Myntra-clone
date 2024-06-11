@@ -4,11 +4,12 @@ import { useDispatch, useSelector } from "react-redux";
 const HomeItem = ({ item }) => {
   const dispatch = useDispatch();
 
-  const bagItem = useSelector((store) => store.bag);
-  const itemFound = bagItem.indexOf(item.id) >= 0;
+  const bagItems = useSelector((store) => store.bag);
+  // const itemFound = bagItem.indexOf(item.id) >= 0;
+  const itemFound = bagItems.some((bagItem) => bagItem.id === item.id);
 
   const addToBag = () => {
-    dispatch(bagAction.addToBag(item.id));
+    dispatch(bagAction.addToBag(item));
   };
 
   const removeFromBag = () => {

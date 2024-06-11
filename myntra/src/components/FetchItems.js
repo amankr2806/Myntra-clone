@@ -19,7 +19,7 @@ const FetchItems = () => {
       dispatch(itemAction.initialItem(items[0]));
     };
     getData();
-  }, []);
+  }, [dispatch]);
   return <></>;
 };
 

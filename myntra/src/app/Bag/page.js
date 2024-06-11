@@ -10,9 +10,11 @@ export default function Bag() {
   const items = useSelector((store) => store.items);
 
   const finalItem = items.filter((item) => {
-    const itemIndex = bagItem.indexOf(item.id);
+    const itemIndex = bagItem.findIndex(bagItem => bagItem.id === item.id);
     return itemIndex >= 0;
   });
+
+  console.log(finalItem);
 
   return (
     <>
@@ -21,7 +23,7 @@ export default function Bag() {
         <div className="bag-page">
           <div className="bag-items-container">
             {finalItem.map((item) => (
-              <BagItem item={item} />
+              <BagItem key={item.id} item={item} />
             ))}
           </div>
           <div className="bag-summary">
